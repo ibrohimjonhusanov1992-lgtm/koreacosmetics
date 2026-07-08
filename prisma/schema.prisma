@@ -32,3 +32,10 @@ model Brand {
 
   products  Product[]
 }
+model OrderItem {
+  id        String @id @default(cuid())
+  orderId   String
+  productId String
+  quantity  Int
+  price     Int
+}
