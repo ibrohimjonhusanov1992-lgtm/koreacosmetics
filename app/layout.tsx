@@ -1,3 +1,4 @@
+import "./globals.css";
 export const metadata = {
   title: "Korea Cosmetics",
   description: "Premium Korean Cosmetics Store",
