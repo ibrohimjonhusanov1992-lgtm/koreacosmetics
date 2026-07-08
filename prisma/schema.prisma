@@ -26,3 +26,11 @@ model Brand {
   logo      String?
   createdAt DateTime @default(now())
 }
+model User {
+  id        String   @id @default(cuid())
+  fullName  String
+  email     String   @unique
+  password  String
+  role      String   @default("CUSTOMER")
+  createdAt DateTime @default(now())
+}
