@@ -10,6 +10,9 @@ model Product {
   isActive    Boolean  @default(true)
   categoryId String?
   brandId    String?
+  category Category? @relation(fields: [categoryId], references: [id])
+brand    Brand?    @relation(fields: [brandId], references: [id])
+ 
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
