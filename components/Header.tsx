@@ -2,27 +2,60 @@ export default function Header() {
   return (
     <header
       style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "20px 40px",
-        background: "#ffffff",
-        borderBottom: "1px solid #e5e5e5",
+        position: "sticky",
+        top: 0,
+        zIndex: 1000,
+        background: "#ffffffee",
+        backdropFilter: "blur(15px)",
+        borderBottom: "1px solid #eee",
       }}
     >
-      <h2>Korea Cosmetics</h2>
-
-      <nav
+      <div
         style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          padding: "18px 20px",
           display: "flex",
-          gap: "20px",
+          justifyContent: "space-between",
+          alignItems: "center",
         }}
       >
-        <a href="/">Home</a>
-        <a href="/shop">Shop</a>
-        <a href="/brands">Brands</a>
-        <a href="/contact">Contact</a>
-      </nav>
+        <h2
+          style={{
+            fontSize: "28px",
+            fontWeight: "bold",
+          }}
+        >
+          Korea Cosmetics
+        </h2>
+
+        <nav
+          style={{
+            display: "flex",
+            gap: "25px",
+            fontSize: "16px",
+          }}
+        >
+          <a href="/">Home</a>
+          <a href="/shop">Shop</a>
+          <a href="/brands">Brands</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+        </nav>
+
+        <div
+          style={{
+            display: "flex",
+            gap: "15px",
+            alignItems: "center",
+          }}
+        >
+          🌐 🇺🇿
+          ❤️
+          🛒
+          👤
+        </div>
+      </div>
     </header>
   );
 }
