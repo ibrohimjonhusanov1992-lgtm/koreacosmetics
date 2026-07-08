@@ -1,44 +1,44 @@
-export default function Hero() {
+type ProductCardProps = {
+  name: string;
+  price: string;
+};
+
+export default function ProductCard({ name, price }: ProductCardProps) {
   return (
-    <section
+    <div
       style={{
-        padding: "100px 20px",
-        textAlign: "center",
-        background: "#f5f7f5",
+        background: "#fff",
+        borderRadius: "20px",
+        padding: "18px",
+        border: "1px solid #eee",
+        boxShadow: "0 10px 30px rgba(0,0,0,0.06)",
       }}
     >
-      <h1
+      <div
         style={{
-          fontSize: "56px",
-          fontWeight: "bold",
-          marginBottom: "20px",
+          height: "230px",
+          borderRadius: "16px",
+          background: "linear-gradient(135deg, #f5f5f5, #e8f3ec)",
+          marginBottom: "16px",
         }}
-      >
-        Discover Korean Beauty
-      </h1>
+      />
 
-      <p
-        style={{
-          fontSize: "20px",
-          color: "#666",
-          marginBottom: "40px",
-        }}
-      >
-        Original Korean skincare & cosmetics delivered to your door.
-      </p>
+      <h3 style={{ fontSize: "18px", marginBottom: "8px" }}>{name}</h3>
+
+      <p style={{ fontWeight: "bold", marginBottom: "14px" }}>{price}</p>
 
       <button
         style={{
+          width: "100%",
+          padding: "12px",
+          borderRadius: "12px",
+          border: "none",
           background: "#111",
           color: "#fff",
-          border: "none",
-          padding: "16px 40px",
-          borderRadius: "12px",
-          fontSize: "18px",
         }}
       >
-        Shop Now
+        Add to Cart
       </button>
-    </section>
+    </div>
   );
 }
