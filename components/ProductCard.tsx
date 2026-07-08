@@ -1,35 +1,15 @@
-type ProductCardProps = {
-  name: string;
-  price: string;
-};
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import ProductGrid from "../components/ProductGrid";
+import Footer from "../components/Footer";
 
-export default function ProductCard({
-  name,
-  price,
-}: ProductCardProps) {
+export default function HomePage() {
   return (
-    <div
-      style={{
-        background: "#fff",
-        padding: "20px",
-        borderRadius: "12px",
-        border: "1px solid #eee",
-      }}
-    >
-      <div
-        style={{
-          height: "200px",
-          background: "#f3f3f3",
-          borderRadius: "10px",
-          marginBottom: "15px",
-        }}
-      />
-
-      <h3>{name}</h3>
-
-      <p>{price}</p>
-
-      <button>Add to Cart</button>
-    </div>
+    <>
+      <Header />
+      <Hero />
+      <ProductGrid />
+      <Footer />
+    </>
   );
 }
