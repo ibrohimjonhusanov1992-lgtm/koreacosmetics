@@ -10,13 +10,29 @@ export default function ProductGrid() {
         padding: "20px",
       }}
     >
-      <h2 style={{ marginBottom: "25px" }}>Popular Products</h2>
+      <h2
+        style={{
+          fontSize: "32px",
+          marginBottom: "10px",
+        }}
+      >
+        Popular Products
+      </h2>
+
+      <p
+        style={{
+          color: "#666",
+          marginBottom: "30px",
+        }}
+      >
+        Best-selling Korean beauty products
+      </p>
 
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
-          gap: "20px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+          gap: "22px",
         }}
       >
         {demoProducts.map((product) => (
