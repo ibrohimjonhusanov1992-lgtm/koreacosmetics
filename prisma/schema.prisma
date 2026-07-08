@@ -34,3 +34,10 @@ model User {
   role      String   @default("CUSTOMER")
   createdAt DateTime @default(now())
 }
+model Order {
+  id          String   @id @default(cuid())
+  userId      String
+  totalPrice  Int
+  status      String   @default("PENDING")
+  createdAt   DateTime @default(now())
+}
