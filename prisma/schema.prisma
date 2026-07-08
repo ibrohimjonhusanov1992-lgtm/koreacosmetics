@@ -20,3 +20,9 @@ model Category {
   name      String
   createdAt DateTime @default(now())
 }
+model Brand {
+  id        String   @id @default(cuid())
+  name      String
+  logo      String?
+  createdAt DateTime @default(now())
+}
