@@ -1,44 +1,36 @@
-type ProductCardProps = {
-  name: string;
-  price: string;
-};
-
-export default function ProductCard({ name, price }: ProductCardProps) {
+export default function Hero() {
   return (
-    <div
+    <section
       style={{
-        background: "#fff",
-        borderRadius: "20px",
-        padding: "18px",
-        border: "1px solid #eee",
-        boxShadow: "0 10px 30px rgba(0,0,0,0.06)",
+        padding: "120px 20px",
+        textAlign: "center",
+        background: "linear-gradient(135deg, #f7fbf8, #eef7f1, #ffffff)",
       }}
     >
-      <div
-        style={{
-          height: "230px",
-          borderRadius: "16px",
-          background: "linear-gradient(135deg, #f5f5f5, #e8f3ec)",
-          marginBottom: "16px",
-        }}
-      />
+      <p style={{ color: "#3f8f5b", fontWeight: "bold", marginBottom: "15px" }}>
+        100% Original Korean Cosmetics
+      </p>
 
-      <h3 style={{ fontSize: "18px", marginBottom: "8px" }}>{name}</h3>
+      <h1 style={{ fontSize: "58px", fontWeight: "bold", marginBottom: "22px" }}>
+        Korean Beauty Starts Here
+      </h1>
 
-      <p style={{ fontWeight: "bold", marginBottom: "14px" }}>{price}</p>
+      <p style={{ fontSize: "20px", color: "#666", marginBottom: "40px" }}>
+        Premium skincare and beauty products from Korea.
+      </p>
 
       <button
         style={{
-          width: "100%",
-          padding: "12px",
-          borderRadius: "12px",
-          border: "none",
           background: "#111",
           color: "#fff",
+          border: "none",
+          padding: "16px 42px",
+          borderRadius: "999px",
+          fontSize: "17px",
         }}
       >
-        Add to Cart
+        Shop Now
       </button>
-    </div>
+    </section>
   );
 }
